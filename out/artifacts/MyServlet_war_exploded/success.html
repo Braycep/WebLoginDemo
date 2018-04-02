@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var i = 5;
+            var interv = setInterval(function () {
+                var redir = document.getElementById("redir");
+                redir.innerHTML = "注册成功，正在跳转到<a href='login.html'>登陆页面</a>..." + (i--) + "S";
+                if (i == 0){
+                    window.location.href="login.html"
+                    clearInterval(interv)
+                }
+            },1000);
+
+        }
+    </script>
+
+    <style type="text/css">
+        #redir{
+            font-family: "Courier New";
+            font-size: 18px;
+            font-color: #dddddd;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="redir">
+        注册成功，正在跳转到<a href="login.html">登陆页面</a>...5S
+    </div>
+</body>
+</html>

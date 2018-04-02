@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Windsail</title>
+	<meta name="keywords" content="Windsail">
+	<meta name="content" content="Windsail">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+
+</head>
+<body class="login_bj" >
+
+<div class="zhuce_body">
+    <div class="zhuce_kong">
+    	<div class="zc">
+        	<div class="bj_bai">
+              <h3>欢迎注册</h3>
+       	  	  <form action="/regServlet" method="get" onsubmit="return checkPassword()">
+                  <input name="username" type="text" class="kuang_txt username" placeholder="用户名" required minlength="4" maxlength="8">
+                  <input name="email" type="text" class="kuang_txt email" placeholder="邮箱" >
+                  <input name="password" type="password" class="kuang_txt password" id="password" placeholder="密码" required minlength="4" maxlength="8">
+                  <input name="password" type="password" class="kuang_txt password"id="re-password" placeholder="重复密码" required minlength="4" maxlength="8">
+                <input name="authCode" onfocus="checkPassword()" type="text" class="kuang_txt authCode" placeholder="验证码" required>
+                <div>
+                	<div class="hui_kuang" style="margin-top: 1px;"><img id="authImg" onclick="refresh(this)" src="/img" width="92" height="31"></div>
+                	<div class="shuaxin" id="refresh" onclick="doRefresh()" ><a href="#"><img src="images/zc_25.jpg" width="15" height="14"></a></div>
+                </div>
+                <div>
+               		<input name="" id="checkbox" onclick="check()" type="checkbox" value="false"><span id="checkbox_text">已阅读并同意<a href="#" target="_blank"><span class="lan">《使用协议》</span></a></span>
+                </div>
+                <input name="注册" type="submit" class="btn_zhuce" value="注册">
+                
+                </form>
+            </div>
+        	<div class="bj_right">
+            	<p>使用以下账号直接登录</p>
+                <a href="#" class="zhuce_qq">QQ注册</a>
+                <a href="#" class="zhuce_wb">微博注册</a>
+                <a href="#" class="zhuce_wx">微信注册</a>
+                <p>已有账号？<a href="login.html">立即登录</a></p>
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+
+</body>
+</html>

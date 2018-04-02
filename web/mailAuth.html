@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Windsail</title>
+	<meta name="keywords" content="Windsail">
+	<meta name="content" content="Windsail">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+    <style>
+
+        .bj_bai{
+            border-radius: 5px;
+        }
+
+        .btn_zhuce{
+            position: relative;
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+<body class="login_bj" >
+
+<div class="zhuce_body">
+    <div class="zhuce_kong" style="left: 57%;">
+    	<div class="zc">
+        	<div class="bj_bai">
+              <h3>验证你的邮箱</h3>
+       	  	  <form action="/mailAuth" method="get" onsubmit="return checkPassword()">
+                <input name="email" type="text" class="kuang_txt email" placeholder="邮箱" readonly>
+                <input name="authCode" onfocus="checkPassword()" type="text" class="kuang_txt authCode" placeholder="验证码" required>
+                <div style="margin-top: 50px">
+               		<input name="" id="checkbox" onclick="check()" type="checkbox" value="false"><span id="checkbox_text">已阅读并同意<a href="#" target="_blank"><span class="lan">《使用协议》</span></a></span>
+                </div>
+                <input name="注册" type="submit" class="btn_zhuce" value="注册">
+                
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+
+</body>
+</html>
